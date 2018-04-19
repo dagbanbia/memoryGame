@@ -17,6 +17,13 @@ const stars = document.querySelectorAll(".fa-star");
 // declaring variable of matchedCards
 let matchedCard = document.getElementsByClassName("match");
 
+ // close icon in modal
+ let closeBtn = document.getElementsByClassName("closeBtn")[0];
+
+ // declare modal
+ let modal = document.getElementById("simpleModal")
+ //Get modal button
+ let modalBtn = document.getElementById('modalBtn')
  //Get timer 
  let timer = document.querySelector(".timer");
 
@@ -44,7 +51,7 @@ function shuffle(array) {
 }
 
 // @description shuffles cards when page is refreshed / loads
-document.body.onload = init();
+ 
 
 // Initialisation function to start a new play 
 function  init(){
@@ -74,9 +81,10 @@ function  init(){
  
        timer.innerHTML = "0 mins 0 secs";
        clearInterval(interval);
+       // document.body.onload
 }
 
- // init();
+  init();
 
 //  toggles open and show classes to display cards
 let displayCard = function (){
@@ -165,11 +173,71 @@ function startTimer(){
     },2000);
 }
 
+//Listen for open click
+// modalBtn.addEventListener('click',openModal);
+//Listen for close click
+closeBtn.addEventListener('click',closeModal);
+//Listen for outside click
+window.addEventListener('click', outsideClick)
+
+
+//Funtion to open modal 
+function openModal(){
+	modal.style.display = 'block';
+}
+
+//Function to close modal
+function closeModal(){
+	modal.style.display = 'none';
+}
+
+//Function to close modal if outside click
+
+function outsideClick(e){
+	if(e.target == modal){
+			modal.style.display = 'none';
+		}
+}
+
+// @description congratulations when all cards match, show modal and moves, time and rating
+function congratulations(){
+
+	
+	var starRating = document.querySelector(".stars").innerHTML;
+    
+    if (matchedCard.length == 16){
+    	clearInterval(interval);
+        finalTime = timer.innerHTML;
+
+        // show congratulations modal
+        openModal();
+
+        //showing move, rating, time on modal
+        document.getElementById("finalMove").innerHTML = moves;
+        document.getElementById("starRating").innerHTML = starRating;
+        document.getElementById("totalTime").innerHTML = finalTime;
+
+       init();
+       stopTimer();
+
+       // timer.innerHTML = "0 mins 0 secs";
+
+      
+    };
+}
+
 
  function stopTimer() {
       clearInterval(interval);
     }
 
+
+ var playAgain = document.getElementById('play-again');
+     playAgain.addEventListener('click',function(){
+     	init();
+     	stopTimer();
+     	closeModal();
+     })
 
 
 
@@ -179,6 +247,7 @@ for (var i = 0; i < cards.length; i++){
     card = cards[i];
     card.addEventListener("click", displayCard);
     card.addEventListener("click", cardOpen);
+    card.addEventListener("click",congratulations);
 };
 
 
