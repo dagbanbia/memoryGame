@@ -20,7 +20,8 @@ body {
 }
 
 body {
-    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    /* Background pattern from Subtle Patterns */
+    background: #ffffff url('../img/geometry2.png'); 
     font-family: 'Coda', cursive;
 }
 
@@ -32,7 +33,7 @@ body {
 }
 
 h1 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 250;
 }
 
@@ -42,7 +43,6 @@ h1 {
 
 .deck {
     width: 85%px;
-    /*min-height: 650px;*/
     background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
     padding: 32px;
     border-radius: 10px;
@@ -60,7 +60,7 @@ h1 {
     margin: 0.2rem 0.2rem;
     background: #2e3d49;
     font-size: 0;
-    color: #ffffff;
+    color: #fff;
     border-radius: 5px;
     cursor: pointer;
     display: flex;
@@ -112,7 +112,6 @@ h1 {
 
 .score-panel {
     text-align: left;
-    /*width: 345px;*/
     margin-bottom: 10px;
 }
 
@@ -154,41 +153,46 @@ h1 {
     background: #333;
 }
 
-.modal{
+/*style for modal*/
+
+.modal {
     display: none;
     position: fixed;
     z-index: 1;
     left: 0;
-    top:0;
+    top: 0;
     height: 100%;
     width: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-content{
+.modal-content {
     background-color: #f4f4f4;
     margin: 40% auto;
-    width: 70%;
+    width: 85%;
+    position: relative;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),0 7px 20px 0 rgba(0, 0, 0, 0.17);
     animation-name: modalopen;
     animation-duration: 2s;
 }
 
-.modal-header{
+.modal-header {
     background-color: coral;
     padding: 15px;
     color: #fff;
 }
 
-modal-header h2, .modal-footer h3{
+modal-header h2, 
+.modal-footer h3 {
     margin: 0;
 }
 
-.modal-body{
+.modal-body {
     padding: 10px 20px;
 }
-.modal-footer{
+
+.modal-footer {
     background: coral;
     padding: 10px;
     color: #fff;
@@ -196,14 +200,15 @@ modal-header h2, .modal-footer h3{
 }
 
 .closeBtn {
-    color:#ccc;
+    color: #ccc;
     float: right;
     font-size: 30px;
 }
 
-.closeBtn:hover, .closeBtn:focus{
-    color:#000;
-    text-decoration:none;
+.closeBtn:hover, 
+.closeBtn:focus {
+    color: #000;
+    text-decoration: none;
     cursor: pointer;
 }
 
@@ -278,7 +283,7 @@ modal-header h2, .modal-footer h3{
     }
 }
 
-@keyframes modalopen{
+@keyframes modalopen {
     from{opacity: 0}
     to{opacity: 1}
 }
@@ -315,6 +320,10 @@ modal-header h2, .modal-footer h3{
     .deck .card {
         height: 125px;
         width: 125px;
+    }
+
+    .modal {
+        width: 60%;
     }
 }
 
