@@ -167,7 +167,7 @@ function startTimer(){
 }
 
 function myTimer(){
-    timer.innerHTML = minute + " : " + second;
+    timer.innerHTML = minute + "mins" + " : " + second+ "secs";
     second++;
     if(second === 60){
         minute++;

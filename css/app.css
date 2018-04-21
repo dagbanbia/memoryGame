@@ -179,7 +179,7 @@ h1 {
 
 .modal-header {
     background-color: coral;
-    padding: 15px;
+    padding: 10px;
     color: #fff;
 }
 
@@ -194,7 +194,7 @@ modal-header h2,
 
 .modal-footer {
     background: coral;
-    padding: 10px;
+    padding: 8px;
     color: #fff;
     text-align: center;
 }
