@@ -233,6 +233,7 @@ playAgain.addEventListener("click", play);
 function play(){
     init();
     second = 0;
+    openedCards = [];
     minute = 0;
     hour = 0;
     stopTimer();
