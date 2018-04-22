@@ -92,7 +92,7 @@ init();
 //  toggles open and show classes to display cards
 let displayCard = function (){
     this.classList.toggle("open");
-    startTimer();
+    // startTimer();
     this.classList.toggle("show");
     this.classList.toggle("disabled");
 };
@@ -143,6 +143,12 @@ function unmatched(){
 function moveCounter(){
     moves++;
     counter.textContent = moves;
+
+    if(moves == 1){
+        second = 0;
+        minute = 0; 
+        startTimer();
+    }
     
     // setting rates based on moves
     if (moves > 10 && moves < 14){
