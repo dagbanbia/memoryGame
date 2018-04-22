@@ -1,11 +1,6 @@
-# Memory Game Project
+## Memory Game Project
 
-## Table of Contents
-
-* [Instructions](#instructions)
-* [Contributing](#contributing)
-
-##About The Game:
+## About The Game:
 
 This game is built as part of the required projects to fulfill the Udacity front end web development track . The purpose of the project is to utilized and demonstrate the mastery of HTML, CSS, and JavaScript studied.
 
@@ -38,8 +33,13 @@ The player starts out with a three star rating -- but the rating drops the more 
 When the game ends, a modal appears with the elapsed time, final star rating and a play again button.
 
 
+## Required Dependencies
+
+Ideally any modern browsers should be enough to open and play the game.
+
+
 ## Contributing
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+This repository is the complete code for my udacity memory Game project. I am very open for any suggestion that will improve the game.Because, I believe is part of the  learning procedure. Therefore, I am willing to  accept any pull requests to improve the game.
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
