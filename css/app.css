@@ -189,13 +189,6 @@ modal-header h2,
     padding: 10px 20px;
 }
 
-.modal-footer {
-    background: coral;
-    padding: 8px;
-    color: #fff;
-    text-align: center;
-}
-
 .closeBtn {
     color: #ccc;
     float: right;
